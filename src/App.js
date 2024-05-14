@@ -13,7 +13,7 @@ const App = () => {
     <div>
       <Signup setSignup={setNumberAuth}/>
       <Routes>
-        <Route path='/' element={< ={numberauth}/>}/>
+        {/* <Route path='/' element={< ={numberauth}/>}/> */}
 
       </Routes>
     </div>

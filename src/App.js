@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import { Route, Routes} from 'react-router-dom';
+import Signup from './pages/Signup/Signup';
+import NumberAuth from './pages/Signup/NumberAuth/NumberAuth';
 import './App.css';
+// import Privacy from './links/Privacy.html'
+// import Terms from './links/Terms and Service..html'
 
-function App() {
+const App = () => {
+
+  const [numberauth, setNumberAuth] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Signup setSignup={setNumberAuth}/>
+      <Routes>
+        <Route path='/' element={< ={numberauth}/>}/>
+
+      </Routes>
     </div>
   );
 }

@@ -1,9 +1,7 @@
 import React from 'react'
 import '../css/Signup.css' 
-// import signupImage from '../../assets/signupBackground.png'
 import signupImage from '../assets/signupBackground.png'
-// i
-import { useNavigate } from 'react-router-dom/dist'
+import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -28,7 +26,6 @@ const Signup = () => {
             <p>Read our <a href='./privacy'>Privacy Policy.</a>Tap "Agree and continue" to <br></br>accept the <a href='./terms'>Terms of Service.</a></p>
           </div>   
           <div className='agree-continue-link'>
-            {/* <a href='./NumberAuth/NumberAuth.jsx'>AGREE AND CONTINUE onClick={()=> setNumberAuth(prev=>prev?false:true)}</a> */}
             <button onClick={agree}>AGREE AND CONTINUE</button>
           </div> 
         </div>

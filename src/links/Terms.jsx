@@ -53,8 +53,7 @@ const Terms = () => {
             use, reproduce, distribute, and display the content you transmit or
             display through the Service.
           </p>
-          <p>
-3.2 WhatsApp does not guarantee the security or privacy of your data or content. It is your responsibility to protect the security and privacy of your data and content.
+          <p>3.2 WhatsApp does not guarantee the security or privacy of your data or content. It is your responsibility to protect the security and privacy of your data and content.
 </p>
 <h2 className="terms-subheader">4. Privacy</h2>
 <p>
@@ -91,6 +90,7 @@ const Terms = () => {
 </p>
 </div>
 </div>
+
     )
 }
 

@@ -42,13 +42,14 @@ a {
     padding-bottom: 30px;
 }
 
-.links1 .agree-continue-link a {
+.links1 .agree-continue-link button {
     color: #000;
     font-weight: 500;
     background-color: #08833d;
     padding: 7px 15px;
     border-radius: 3px;
     transition: transform 0.3s, box-shadow 0.2s;
+    border: none;
 }
 .links1 .agree-continue-link:hover {
     transform: translateY(3px);

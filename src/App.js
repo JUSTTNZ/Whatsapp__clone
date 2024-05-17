@@ -6,6 +6,7 @@ import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
 import GetUser from './profile/Getuser';
+import UserPro from './profile/userpro';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/terms' element={<Terms />} />
         <Route path='/verify-otp' element={<VerifyOtp />} />
         <Route path='/get-user' element={<GetUser />} />
+        <Route path='/user-profile' element={<UserPro />} />
       </Routes>
       </Router>
     </div>

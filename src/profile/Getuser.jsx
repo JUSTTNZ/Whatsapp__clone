@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import '../css/getuser.css'
 // import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const GetUser = (
 ) => {
   const location = useLocation();
-  
+  const navigate = useNavigate()
   const { state: { phoneNumber } } = location;
   const [image, setImage] = useState("");
   const [preview, setPreview] = useState("");
@@ -19,9 +19,11 @@ const GetUser = (
     reader.onloadend = (imageUrl) => {
       setImage(file);
       setPreview(imageUrl.target.result);
+      console.log(file)
     };
 
     reader.readAsDataURL(file);
+    
   };
 
 //   const handleAddImage = async (
@@ -36,10 +38,25 @@ const GetUser = (
 const handlenamechange = (e) => {
     setUsername(e.target.value)
 }
-const getName = () => {
+const getName = async () => {
+      // Convert the image file to Base64 string
+      const base64Image = await convertImageToBase64(image);
     setUsername(name)
     console.log(name)
+    navigate("/user-profile",{state:{phoneNumber,name,image: base64Image}})
 }
+const convertImageToBase64 = async (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+    reader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
   return (
     <div>
    <div className="container">

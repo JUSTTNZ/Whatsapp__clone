@@ -5,6 +5,7 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
+import UserChat from './chats/UserChat';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/verify-otp' element={<VerifyOtp />} />
+        <Route path='/user-chat' element={<UserChat/>}/>
       </Routes>
       </Router>
     </div>

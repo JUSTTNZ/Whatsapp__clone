@@ -19,8 +19,8 @@ const App = () => {
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/verify-otp' element={<VerifyOtp />} />
-        <Route path='/get-user' element={<GetUser />} />
-        <Route path='/user-profile' element={<UserPro />} />
+        {/* <Route path='/get-user' element={<GetUser />} />
+        <Route path='/user-profile' element={<UserPro />} /> */}
       </Routes>
       </Router>
     </div>

@@ -13,56 +13,32 @@ import Tag from '../../src/assets/whatsapp clone chat images/9025893_tag_simple_
 import FilterChat from '../../src/assets/whatsapp clone chat images/9040443_filter_icon.png'
 import UserMessage from './UserMessage'
 
-
-
+import messages from './UserTextData'
+import DisplayMessages from './DisplayMessages'
+import Header from './header'
+import Sidebar from './sidebar'
+import Chatbox from './chatbox'
+import Chatholder from './chatholder'
 const UserChat = () => {
   return (
-    <div>
-      <div className='logo'>
-            <img className='whatsappLogo' src={WhatsappLogo} alt=''/>
-            <p className='whatsapp'>WhatsApp</p>
-      </div>
-      <aside className='aside'>  
-        <div className='side-icons'>
-            <div className='upper-side-icons'>
-                <img src={Burgermenu} alt=''/>
-                <img src={Messages} alt=''/>
-                <img src={CallPhone} alt=''/>
-                <img src={StatusViewer} alt=''/>
-            </div>
-            <div className='lower-side-icons'>
-                <img src={Star} alt=''/>
-                <img src={Archive} alt=''/>
-                <img src={Settings} alt=''/>
-            </div>
-        </div>
-      </aside>
-      <div className='chat-option'>
-          <div className='header'>
-              <h2>Chats</h2>
-              <div className='header-icons'>
-                <img src={NewChats} alt=''/>
-                <img src={Tag} alt=''/>
-                <img src={FilterChat} alt=''/>
-              </div>
-          </div>
-          <div className='search-container'>
-          <form className='search-form'>
-              <input 
-                type='text'
-                className='search-input'
-                placeholder='search or start a new chat'
-              />
-          </form>
-          </div>
-          <div>
-              <div className='message-data'>
-                <UserMessage/>
-              </div>
-          </div>
-          
-      </div>
+   <div className=''>
+     <Header />
+    <div class="">
+     
+    <div className="row">
+    <div className="col-1 ">
+    <Sidebar />
     </div>
+    <div className="col-3">
+    <Chatbox />
+    </div>
+    <div className="col-8 border">
+    <Chatholder />
+    </div>
+    </div>
+    </div>
+    </div>
+    
   )
 }
 

@@ -1,12 +1,12 @@
 
 import React,{useState} from "react";
 import { useLocation,} from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const VerifyOtp = (
 ) => {
   const [otp, setOtp] = useState("");
   const { state: { phoneNumber,newRandomCode } } = useLocation();
-
+const navigate = useNavigate()
   // Check if both phoneNumber and dummyCode are defined
 if (!phoneNumber || !newRandomCode) {
     return <div>Loading...</div>;
@@ -20,6 +20,7 @@ if (!phoneNumber || !newRandomCode) {
     if (otp == newRandomCode) {
       alert("OTP verified successfully. Redirecting to the next page...");
       // Implement your navigation logic here
+      navigate("/get-user", { state: { phoneNumber } });
     } else {
       alert("Incorrect OTP, please try again.");
     }

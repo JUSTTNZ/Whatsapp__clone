@@ -34,7 +34,7 @@ const UserPro = () => {
         </div>
       <div className="user-profile-info">
         <label className="user-profile-label">Phone Number</label>
-        <h3 className="user-profile-data">{phoneNumber}</h3>
+        <h3 className="user-profile-data">{phoneNumber}  </h3>
       </div>
       <div className="border-bottom mt-4"></div>
       <div className="user-profile-footer">

@@ -1,11 +1,14 @@
+
+import img1 from '../assets/pictures/user.jpg'
 const messages = [
   {
     id: "1",
+    user: "Billie dominic",
     timestamp: 1652742000,
     sender: "John Doe",
     content: "Hey, how are you?",
     status: "sent",
-    picture: "https://images.pexels.com/photos/1237119/pexels-photo-1237119.jpeg?auto=compress&cs=tinysrgb&w=300"
+    picture: img1
   },
   {
     id: "2",

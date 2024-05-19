@@ -5,13 +5,13 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
-// <<<<<<< features
-// // import GetUser from './profile/Getuser';
-// // import UserPro from './profile/userpro';
 
-// =======
-// // import UserChat from './chats/UserChat';
-// >>>>>>> main
+ import GetUser from './profile/Getuser';
+import UserPro from './profile/userpro';
+
+
+import UserChat from './chats/UserChat';
+
 const App = () => {
  
   return (
@@ -23,13 +23,13 @@ const App = () => {
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/verify-otp' element={<VerifyOtp />} />
-          
-// <<<<<<< features
-//         {/* <Route path='/get-user' element={<GetUser />} />
-//         <Route path='/user-profile' element={<UserPro />} /> */}
-// =======
-// //         <Route path='/user-chat' element={<UserChat/>}/>
-// >>>>>>> main
+
+     <Route path='/get-user' element={<GetUser />} />
+     <Route path='/user-chat' element={<UserChat/>}/>
+     <Route path='/user-profile' element={<UserPro />} />
+
+      
+
       </Routes>
       </Router>
       

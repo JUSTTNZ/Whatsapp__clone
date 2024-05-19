@@ -43,7 +43,7 @@ const getName = async () => {
       const base64Image = await convertImageToBase64(image);
     setUsername(name)
     console.log(name)
-    navigate("/user-profile",{state:{phoneNumber,name,image: base64Image}})
+    navigate("/user-chat",{state:{phoneNumber,name,image: base64Image}})
 }
 const convertImageToBase64 = async (file) => {
   return new Promise((resolve, reject) => {
@@ -61,6 +61,7 @@ const convertImageToBase64 = async (file) => {
     <div>
    <div className="container">
   <div className="profile-container">
+    <h5>Profile info</h5>
     <h5 className="profile-info">Please provide your name and an optional photo</h5>
     <div className="profile-image-container">
       <label
@@ -70,7 +71,7 @@ const convertImageToBase64 = async (file) => {
       >
         <img
           src={preview}
-          alt="Your Name"
+          alt=""
           class="profile-image"
         />
         <input type="file" name="file" accept="" id="upload-file" />
@@ -87,7 +88,7 @@ const convertImageToBase64 = async (file) => {
       />
       <span className="emoji-icon">😊</span>
     </div>
-    <button className="next-button" onClick={getName}>Next</button>
+    <button className="next-button btn btn-sm btn-secondary" onClick={getName}>Next</button>
   </div>
 </div>
 

@@ -1,4 +1,4 @@
- const messages = [
+const messages = [
   {
     id: "1",
     timestamp: 1652742000,
@@ -160,3 +160,5 @@
     picture: "https://images.pexels.com/photos/2100121/pexels-photo-2100121.jpeg?auto=compress&cs=tinysrgb&w=300"
   }
 ];
+
+export default messages

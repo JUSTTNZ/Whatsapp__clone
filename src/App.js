@@ -6,9 +6,8 @@ import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
 import UserChat from './chats/UserChat';
-
 const App = () => {
-
+ 
   return (
     <div>
       <Router>
@@ -21,6 +20,7 @@ const App = () => {
         <Route path='/user-chat' element={<UserChat/>}/>
       </Routes>
       </Router>
+      
     </div>
   );
 }

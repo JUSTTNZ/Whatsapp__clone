@@ -11,7 +11,7 @@ import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.p
 import NewChats from '../../src/assets/whatsapp clone chat images/9104159_write_compose_pencil_edit_message_icon.png'
 import Tag from '../../src/assets/whatsapp clone chat images/9025893_tag_simple_icon.png'
 import FilterChat from '../../src/assets/whatsapp clone chat images/9040443_filter_icon.png'
-
+import UserMessage from './UserMessage'
 
 
 
@@ -57,8 +57,7 @@ const UserChat = () => {
           </div>
           <div>
               <div className='message-data'>
-                
-
+                <UserMessage/>
               </div>
           </div>
           

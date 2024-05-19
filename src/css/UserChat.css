@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.aside {
+    width: 70px;
+    height: 100vh;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: #aaaaaa4d;
+    border-bottom: 2px #a5a5a5 solid;
+}
+
+.whatsappLogo {
+    width: 40px;
+    padding-right: 10px;
+}
+
+.whatsapp {
+    letter-spacing: 1px;
+    padding-right: 10px;
+    border-right: 2px rgba(209, 209, 209, 0.432) solid;
+}
+
+.side-icons{
+    width: 70px;
+    height: 100vh;
+    background-color: #aaaaaa4d;
+    border-right: 2px #a5a5a5 solid;
+}
+
+.upper-side-icons{
+    padding-top: 30px;
+}
+
+.upper-side-icons img{
+    width: 30px;
+    display: flex;
+    margin:  0px 20px 20px ;
+}
+
+.lower-side-icons {
+    padding-top: 470px;
+}
+
+.lower-side-icons img{
+    width: 30px;
+    display: flex;
+    margin: 30px 20px;
+}
+
+.chat-option{
+    
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 45%;
+    gap: 130px;
+    position: absolute;
+    top: 64px;
+    left: 70px;
+    padding: 20px;
+}
+
+.header-icons img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.search-container {
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    display: flex;
+}
+
+.search-form{
+    width: 100%;
+    max-width: 35%;
+}
+
+.search-input{
+    padding: 7px 85px;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.search-input{
+    border: 1px #c0bebe solid;
+    border-radius: 5px;
+    border-bottom: 4px rgb(78, 172, 78) solid;
+}
+
+.input{
+    text-align: left;
+}
+
+input::placeholder{
+   text-align: left;
+   color: #7c7878;
+   position: absolute;
+   left: 30px;
+   letter-spacing: 2px;
+}
+
+
+

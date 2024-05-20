@@ -8,9 +8,9 @@ import { useNavigate } from "react-router-dom";
 const NumberAuth = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  const [otp, setOtp] = useState("");
+  // const [otp, setOtp] = useState("");
   const [randomCode, setRandomCode] = useState("");
-  const [isphonevalid, setisphonevalid] = useState("")
+  // const [isphonevalid, setisphonevalid] = useState("")
   const navigate = useNavigate();
   const validatePhone = () => {
     // Remove any leading or trailing whitespaces

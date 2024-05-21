@@ -1,14 +1,14 @@
 import React from "react";
-import "../css/chatholder.css"
+import "../css/chatHolder.css"
 
 import img1 from '../assets/pictures/user.jpg'
 import Video from '../assets/whatsapp clone chat images/8201367_video_calling_recording_ui_film_icon.png'
-const Chatholder = () => {
+const ChatHolder = () => {
     return(
 <div className="">
 <header>
 <div class="left-header">
-<img src={img1} class="user-image" alt="User Profile Image" />
+<img src={img1}  class="user-image" alt="User Profile " />
 <span class="username">Billie Dominic</span>
 </div>
 <div class="right-header">
@@ -25,4 +25,4 @@ const Chatholder = () => {
     )
 }
 
-export default Chatholder;
+export default ChatHolder;

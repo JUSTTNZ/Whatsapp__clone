@@ -5,7 +5,7 @@ import messages from './UserTextData'
 import NewChats from '../../src/assets/whatsapp clone chat images/9104159_write_compose_pencil_edit_message_icon.png'
 import Tag from '../../src/assets/whatsapp clone chat images/9025893_tag_simple_icon.png'
 import FilterChat from '../../src/assets/whatsapp clone chat images/9040443_filter_icon.png'
-const Chatbox = () => {
+const ChatBox = () => {
 return(
     <div className='chat-option'>
     <div className='header'>
@@ -37,4 +37,4 @@ return(
 )
 }
 
-export default Chatbox;
+export default ChatBox;

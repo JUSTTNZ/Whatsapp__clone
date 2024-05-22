@@ -3,7 +3,7 @@ import img1 from '../assets/pictures/user.jpg'
 const messages = [
   {
     id: "1",
-    user: "Billie dominic",
+    // user: "Billie dominic",
     timestamp: 1652742000,
     sender: "John Doe",
     content: "Hey, how are you?",
@@ -16,7 +16,7 @@ const messages = [
     sender: "Emily Clark",
     content: "I'm good, thanks! How about you?",
     status: "delivered",
-    picture: "https://images.pexels.com/photos/1059878/pexels-photo-1059878.jpeg?auto=compress&cs=tinysrgb&w=300"
+    picture: "https://images.pexels.com/photos/1459398/pexels-photo-1459398.jpeg?auto=compress&cs=tinysrgb&w=300"
   },
   {
     id: "3",

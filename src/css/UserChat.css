@@ -64,9 +64,10 @@ body {
     margin: 30px 20px;
 }
 .chat-option {
+    display: flex;
     position: absolute;
     top: 150px; 
-  left: 70px;
+    left: 70px;
     width: calc(100% - 70px);
     height: calc(100% - 200px);
     padding: 10px;
@@ -76,7 +77,7 @@ body {
 .header {
     display: flex;
     width: 100%;
-    max-width: 45%;
+    max-width: 50%;
     gap: 130px;
     position: absolute;
     top: -90px;
@@ -105,7 +106,7 @@ body {
 
 .search-form{
     width: 100%;
-    max-width: 35%;
+    max-width: 50%;
 }
 
 .search-input{
@@ -136,7 +137,7 @@ input::placeholder{
 
 
 .message-data {
-    width: 100%;
+    width: 30.5%;
     height: 100%;
     overflow-y: auto;  /* Adds a scrollbar to chats */
     position: absolute;

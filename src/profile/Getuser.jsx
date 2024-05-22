@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import '../css/getUser.css'
+import '../css/getuser.css'
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const GetUser = (
@@ -35,7 +35,7 @@ const GetUser = (
 //       console.log(res);
 //     });
 //   };
-const handleNameChange = (e) => {
+const handlenamechange = (e) => {
     setUsername(e.target.value)
 }
 const getName = async () => {
@@ -84,7 +84,7 @@ const convertImageToBase64 = async (file) => {
         id="name-input"
         placeholder="Type your name here"
         value={name}
-        onChange={handleNameChange}
+        onChange={handlenamechange}
       />
       <span className="emoji-icon">😊</span>
     </div>

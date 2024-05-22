@@ -8,10 +8,10 @@ import Settings from '../../src/assets/whatsapp clone chat images/2849830_multim
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
 import '../css/UserChat.css'
 // import img1 from '../assets/pictures/user.jpg'
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 const Sidebar = () =>{
-    const location = useLocation();
-    const { state: {image} } = location;
+    // const location = useLocation();
+    // const { state: {mainImg} } = location;
     return (
         <aside className='aside'>  
         <div className='side-icons'>
@@ -25,7 +25,7 @@ const Sidebar = () =>{
                 <img src={Star} alt=''/>
                 <img src={Archive} alt=''/>
                 <img src={Settings} alt=''/>
-                <img src={image} alt="profile-pic" className="profile-pic" />
+                {/* <img src={mainImg} alt="profile-pic" className="profile-pic" /> */}
             </div>
         </div>
       </aside>

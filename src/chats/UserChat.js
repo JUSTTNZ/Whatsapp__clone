@@ -17,8 +17,8 @@ import '../css/UserChat.css'
 // import DisplayMessages from './DisplayMessages'
 import Header from './header'
 import Sidebar from './sidebar'
-import ChatBox from './chatBox'
-import ChatHolder from './chatHolder'
+import ChatBox from './chatbox'
+import ChatHolder from './chatholder'
 const UserChat = () => {
   return (
    <div className=''>

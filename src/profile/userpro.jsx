@@ -1,18 +1,18 @@
-// import React,{useState} from "react";
+import React,{useState} from "react";
 import { useLocation } from "react-router-dom";
-import '../css/userPro.css'
+import '../css/userpro.css'
 
 
 const UserPro = () => {
     const location = useLocation();
-    const { state: { phoneNumber,name,image} } = location;
+    const { state: { phoneNumber,name,file,image} } = location;
    console.log(image)
   
     return(
         <div className="container">
            <div className="user-profile-container">
       <div className="user-profile-header">
-        <img src={image} alt="UserProfile" className="user-profile-picture" />
+        <img src={image} alt="User profile" className="user-profile-picture" />
        </div>
     
 

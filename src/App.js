@@ -8,7 +8,7 @@ import VerifyOtp from './profile/verify';
 
 
 import GetUser from './profile/GetUser';
-import UserPro from './profile/userPro';
+
 
 
 
@@ -28,7 +28,7 @@ const App = () => {
 
      <Route path='/get-user' element={<GetUser />} />
      <Route path='/user-chat' element={<UserChat/>}/>
-     <Route path='/user-profile' element={<UserPro />} />
+     
 
       
 

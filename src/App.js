@@ -5,9 +5,10 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
-
- import GetUser from './profile/Getuser';
-import UserPro from './profile/userpro';
+import UserPro from './profile/userPro';
+import GetUser from './profile/GetUser';
+// import UserPro from './profile/userpro';
+// import GetUser from './profile/Getuser';
 
 
 import UserChat from './chats/UserChat';

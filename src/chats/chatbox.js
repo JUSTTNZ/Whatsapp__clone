@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import DisplayMessages from './DisplayMessages'; 
-import NewChats from './NewChats'; 
-import Tag from './Tag'; 
-import FilterChat from './FilterChat'; 
+import '../css/UserChat.css'
+import DisplayMessages from './DisplayMessages'
+// import messages from './UserTextData'
+// import message from './DisplayMessages'
+import NewChats from '../../src/assets/whatsapp clone chat images/9104159_write_compose_pencil_edit_message_icon.png'
+import Tag from '../../src/assets/whatsapp clone chat images/9025893_tag_simple_icon.png'
+import FilterChat from '../../src/assets/whatsapp clone chat images/9040443_filter_icon.png'
+import '../css/chatbox.css'
 
 const ChatBox = ({ messages, sortedBy }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -13,7 +17,7 @@ const ChatBox = ({ messages, sortedBy }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('searching for', searchValue); 
+    console.log('searching for', searchValue); // Simplified logging
   };
 
   // Corrected filter function

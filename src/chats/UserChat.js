@@ -23,7 +23,7 @@ const UserChat = () => {
   return (
    <div className=''>
      <Header />
-    <div class=""> 
+    <div className="deck"> 
     <div className="row">
     <div className="col-1 ">
     <Sidebar />

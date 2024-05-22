@@ -3,7 +3,7 @@ import '../css/UserMessage.css'
 
 
 
-const UserMessage = ({ message, status, date, content,picture,sender }) => (
+const UserMessage = ({  status, date, content,picture,sender }) => (
   <div>
       {/* <DisplayMessages messages={UserTextData.messages}  /> */}
   <li>

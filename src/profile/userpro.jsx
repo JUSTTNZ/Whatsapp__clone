@@ -12,7 +12,7 @@ const UserPro = () => {
         <div className="container">
            <div className="user-profile-container">
       <div className="user-profile-header">
-        <img src={image} alt="User Picture" className="user-profile-picture" />
+        <img src={image} alt="User profile" className="user-profile-picture" />
        </div>
     
 

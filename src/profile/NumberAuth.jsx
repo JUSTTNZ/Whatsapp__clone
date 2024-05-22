@@ -8,12 +8,13 @@ import { useNavigate } from "react-router-dom";
 const NumberAuth = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  const [otp, setOtp] = useState("");
+  // const [otp, setOtp] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [randomCode, setRandomCode] = useState("");
-  const [isphonevalid, setisphonevalid] = useState("")
+  // const [isphonevalid, setisphonevalid] = useState("")
   const navigate = useNavigate();
   const validatePhone = () => {
-    // Remove any leading or trailing whitespaces
+    // Remove any leading or trailing whitespace
     const trimmedPhoneNumber = phoneNumber.trim();
   
     // Check if the phone number has at least 10 digits

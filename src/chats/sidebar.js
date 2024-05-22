@@ -7,11 +7,11 @@ import Archive from '../../src/assets/whatsapp clone chat images/8541693_archive
 import Settings from '../../src/assets/whatsapp clone chat images/2849830_multimedia_options_setting_settings_gear_icon.png'
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
 import '../css/UserChat.css'
-import img1 from '../assets/pictures/user.jpg'
+// import img1 from '../assets/pictures/user.jpg'
 import { useLocation } from "react-router-dom";
 const Sidebar = () =>{
     const location = useLocation();
-    const { state: { phoneNumber,name,file,image} } = location;
+    const { state: {image} } = location;
     return (
         <aside className='aside'>  
         <div className='side-icons'>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import '../css/getUser.css'
+import '../css/getuser.css'
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const GetUser = (

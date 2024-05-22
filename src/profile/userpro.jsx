@@ -1,6 +1,6 @@
 // import React,{useState} from "react";
 import { useLocation } from "react-router-dom";
-import '../css/userPro.css'
+import '../css/userpro.css'
 
 
 const UserPro = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/chatHolder.css"
+import "../css/chatholder.css"
 
 import img1 from '../assets/pictures/user.jpg'
 import Video from '../assets/whatsapp clone chat images/8201367_video_calling_recording_ui_film_icon.png'

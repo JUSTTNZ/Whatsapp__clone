@@ -17,7 +17,7 @@ import UserChat from './chats/UserChat';
 const App = () => {
  
   return (
-    <div>
+    <div className='app'>
       <Router>
       <Routes>
         <Route path='/' element={<Signup /> } />

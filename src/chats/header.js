@@ -3,7 +3,7 @@ import WhatsappLogo from '../../src/assets/whatsapp clone chat images/4375153_lo
 import '../css/UserChat.css'
 const Header = () => {
     return(
-          <div className='logo'>
+          <div className='logo header-top'>
             <img className='whatsappLogo' src={WhatsappLogo} alt=''/>
             <p className='whatsapp'>WhatsApp</p>
       </div> 

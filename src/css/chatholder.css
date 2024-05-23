@@ -1,9 +1,32 @@
+body{
+  width: 100%;
+  
+}
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat{
+  overflow-y: auto;
+  /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.chat::-webkit-scrollbar {
+  display: none; /* WebKit-based browsers (Chrome, Safari) */
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f5f5f5;
     padding: 10px;
+    width: 101.5%;
+    position: relative;
+    right: 11px;
+   
   }
   
   .left-header {
@@ -32,3 +55,98 @@ header {
     margin-right: 0;
   }
   
+
+  .sender-holder {
+    background-color: #d8d8d8;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    width: 50%;
+    margin-top: 40px;
+}
+
+.receiver-holder {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: flex-end;
+    
+    margin-left: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* margin-right: 10px; */
+    
+    position: relative;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+
+
+.sender-text {
+    margin-right: 10px;
+}
+
+.time {
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+.time-rec{
+  margin-right: 15px !important;
+}
+
+.sender-text, .time {
+    color: #4d4d4d;
+}
+
+.message-container.receiver {
+  align-items: flex-start;
+}
+
+
+
+.receiver-holder:after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+}
+
+.receiver-text {
+  margin-bottom: 5px;
+}
+
+.message-status {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 101.5%;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ccc;
+  position: relative;
+  right: 11px;
+ 
+}
+.message-input {
+  flex-grow: 1;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;
+ width: 700px;
+}

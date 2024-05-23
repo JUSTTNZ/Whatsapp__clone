@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../css/UserMessage.css'
+import { useParams } from "react-router-dom";
+import messages from "./UserTextData";
 
+const UserMessage = ({ status, date, content, picture, sender }) => {
+  const [newContent, setNewContent] = useState(content);
+  
+  useEffect(() => {
+    const maxLength = 22; // Set your desired maximum length here
+    if (content.length > maxLength) {
+      setNewContent(content.substring(0, maxLength) + '...');
+    }
+  }, [content]);
 
-
-const UserMessage = ({  status, date, content,picture,sender }) => (
-  <div>
-      {/* <DisplayMessages messages={UserTextData.messages}  /> */}
-  <li>
-    <img src={picture} alt={picture} className="chat-picture" />
-    <div className="chat-preview">
-    <p className="sender">{sender}</p>
-    {/* <p className="message">{message}</p> */}
-    <p className="content">{content}</p>
+ 
+  
+  return (
+    <div className="message-container">
+      <img src={picture} alt="User Image" className="user-image"/>
+      <div className="message-content">
+        <div className="sender-content">
+          <p className="sender">{sender}</p>
+          <p className="date">03:30 PM</p>
+        </div>
+        <div className="timestamp">
+          <p className="content">{newContent}</p>
+          <p className="status">✓✓</p>
+        </div>
+      </div>
     </div>
-    <div className="timestamp">
-    <p className="date">{new Date(date).toLocaleString()}</p>
-    <p className="status"> {status}</p>
-    </div>
-  </li>
-  </div>
+  );
+}
 
-);
-
-export default UserMessage
-
+export default UserMessage;

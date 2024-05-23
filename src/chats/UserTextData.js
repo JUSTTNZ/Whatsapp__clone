@@ -160,7 +160,7 @@ const messages = [
     sender: "Harper Adams",
     content: "Bye for now!",
     status: "read",
-    picture: "https://images.pexels.com/photos/2100121/pexels-photo-2100121.jpeg?auto=compress&cs=tinysrgb&w=300"
+    picture: "https://images.pexels.com/photos/2101861/pexels-photo-2101861.jpeg?auto=compress&cs=tinysrgb&w=300"
   }
 ];
 

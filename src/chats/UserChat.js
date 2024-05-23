@@ -20,10 +20,10 @@ import Sidebar from './sidebar'
 import ChatBox from './chatbox'
 import ChatHolder from './chatholder'
 const UserChat = () => {
-  return (
-   <div className=''>
+  return (    
+   <div className='head'>
      <Header />
-    <div className="deck"> 
+    <div className=""> 
     <div className="row">
     <div className="col-1 ">
     <Sidebar />
@@ -32,7 +32,7 @@ const UserChat = () => {
     <ChatBox />
     </div>
     <div className="col-8 border">
-    <ChatHolder />
+    <ChatHolder className="holder" />
     </div>
     </div>
     </div>

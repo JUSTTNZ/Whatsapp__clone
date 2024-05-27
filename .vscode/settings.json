@@ -1,6 +1,10 @@
 {
   "cSpell.words": [
     "Burgermenu",
+    "chatbox",
+    "chatholder",
+    "getuser",
+    "handlenamechange",
     "isphonevalid",
     "numberauth",
     "setisphonevalid"

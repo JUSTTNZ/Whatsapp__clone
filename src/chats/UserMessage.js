@@ -17,7 +17,7 @@ const UserMessage = ({ status, date, content, picture, sender }) => {
   
   return (
     <div className="message-container">
-      <img src={picture} alt="User Image" className="user-image"/>
+      <img src={picture} alt="User" className="user-image"/>
       <div className="message-content">
         <div className="sender-content">
           <p className="sender">{sender}</p>

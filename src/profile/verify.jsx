@@ -2,6 +2,7 @@
 import React,{useState} from "react";
 import { useLocation,} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import '../css/verify.css'
 const VerifyOtp = (
 ) => {
   const [otp, setOtp] = useState("");
@@ -27,12 +28,12 @@ if (!phoneNumber || !newRandomCode) {
   };
 
   return (
-    <div>
+    <div className="verify-container">
       <h1>Verify OTP</h1>
       <p>Enter the OTP sent to {phoneNumber} to verify:</p>
       <p>OTP code: {newRandomCode}</p>
       <input type="text" value={otp} onChange={handleOtpInputChange} />
-      <button onClick={verifyOtp}>Verify OTP</button>
+      <button onClick={verifyOtp} className="verify-btn btn btn-secondary">NEXT</button>
     </div>
   );
 };

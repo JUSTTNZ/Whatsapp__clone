@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import '../css/getuser.css'
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { FaCamera } from "react-icons/fa";
+import { FaSmile } from "react-icons/fa";
 const GetUser = (
 ) => {
   const location = useLocation();
@@ -15,7 +17,7 @@ const GetUser = (
   const handleImage = async (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
-
+         console.log(file)
     reader.onloadend = (imageUrl) => {
       setImage(file);
       setPreview(imageUrl.target.result);
@@ -39,11 +41,16 @@ const handlenamechange = (e) => {
     setUsername(e.target.value)
 }
 const getName = async () => {
-      // Convert the image file to Base64 string
-      const base64Image = await convertImageToBase64(image);
-    setUsername(name)
-    console.log(name)
-    navigate("/user-chat",{state:{phoneNumber,name,image: base64Image}})
+  if (preview && name){
+ // Convert the image file to Base64 string
+ const base64Image = await convertImageToBase64(image);
+ setUsername(name)
+ console.log(name)
+ navigate("/user-chat",{state:{phoneNumber,name,image: base64Image}})
+  } else {
+    alert("Add image and name to continue")
+  }
+     
 }
 const convertImageToBase64 = async (file) => {
   return new Promise((resolve, reject) => {
@@ -64,19 +71,26 @@ const convertImageToBase64 = async (file) => {
     <h5>Profile info</h5>
     <h5 className="profile-info">Please provide your name and an optional photo</h5>
     <div className="profile-image-container">
-      <label
-        class="profile-image-upload"
-        htmlFor="upload-file"
-        onChange={handleImage}
-      >
-        <img
-          src={preview}
-          alt=""
-          class="profile-image"
+      <label className="profile-image-upload" htmlFor="upload-file">
+        {preview ? (
+          <img src={preview} alt="Profile Preview" className="profile-image" />
+        ) : (
+          <div className="camera-icon-cont" >
+          <FaCamera className="camera-icon" />
+        </div>
+        )}
+        <input
+          type="file"
+          name="file"
+          accept="image/*"
+          id="upload-file"
+          onChange={handleImage}
+          style={{ display: 'none' }}
         />
-        <input type="file" name="file" accept="" id="upload-file" />
       </label>
     </div>
+
+
     <div className="profile-input">
       
       <input
@@ -87,6 +101,8 @@ const convertImageToBase64 = async (file) => {
         onChange={handlenamechange}
       />
       <span className="emoji-icon">😊</span>
+      
+     
     </div>
     <button className="next-button btn btn-sm btn-secondary" onClick={getName}>Next</button>
   </div>

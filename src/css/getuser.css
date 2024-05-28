@@ -48,9 +48,9 @@
   }
   
   #name-input::placeholder {
-    padding-left: 0;     /* Ensure placeholder starts from the left edge */
-    text-align: left;    /* Ensure placeholder text is aligned to the left */
-    color: #ccc;         /* Optional: change the placeholder text color */
+    padding-left: 0;
+    text-align: right;
+    color: #ccc;        
   }
 
   
@@ -61,6 +61,8 @@
     align-items: center;
     margin-bottom: 16px;
     text-align: left;
+    position: relative;
+    left: 20px;
 
   }
   
@@ -89,8 +91,9 @@
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    margin: 16px auto;
+    margin-left: 20px;
     cursor: pointer;
+    
   }
  
   /* .profile-image-upload input[type="file"] {
@@ -102,3 +105,18 @@
     opacity: 40;
     cursor: pointer;
   } */
+  .camera-icon-cont {
+    position: absolute;
+    
+    cursor: pointer;
+        margin-top: 150px;
+        margin-left: 150px;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .camera-icon {
+    color: white; 
+    font-size: 2em; 
+  }

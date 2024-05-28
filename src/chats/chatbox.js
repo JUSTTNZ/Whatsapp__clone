@@ -41,9 +41,7 @@ return(
           value={searchQuery}
            onChange={(e) => setSearchQuery(e.target.value)}
            onKeyDown={(e) => {
-            if (e.key === "Enter") {
-            handleSearch();
-               }
+           
                }}
         />
       </form>
@@ -53,8 +51,9 @@ return(
       <div className='message-data'>
         {/* <UserMessage messages={messages}/> */}
         <DisplayMessages messages={messages}
+                        //  searchQuery={searchQuery}
+                        // handleSearch={handleSearch}
                          searchQuery={searchQuery}
-                          handleSearch={handleSearch}
         />
       </div>
     </div>

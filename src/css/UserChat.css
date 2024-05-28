@@ -56,8 +56,7 @@ body {
 
 .lower-side-icons {
     /* padding-top: 470px; */
-    position: absolute;
-    top:300px;
+    margin-top: 150px;
 }
 
 .lower-side-icons img{
@@ -160,3 +159,5 @@ input::placeholder{
     height: 30px;
    
   }
+
+  

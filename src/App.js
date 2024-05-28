@@ -5,8 +5,6 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
-
-
 import GetUser from './profile/GetUser';
 
 

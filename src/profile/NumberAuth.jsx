@@ -13,6 +13,7 @@ const NumberAuth = () => {
   const [randomCode, setRandomCode] = useState("");
   // const [isphonevalid, setisphonevalid] = useState("")
   const navigate = useNavigate();
+
   const validatePhone = () => {
     // Remove any leading or trailing whitespace
     const trimmedPhoneNumber = phoneNumber.trim();
@@ -39,7 +40,7 @@ const NumberAuth = () => {
   
     if (validatedPhoneNumber) {
       // If the phone number is valid, generate a random 6-digit number
-      const newRandomCode = Math.floor(100000 + Math.random() * 900000);
+      const newRandomCode = Math.floor(10000 + Math.random() * 90000);
   
       // Simulate a delay of 3 seconds for the "sending" process
       setTimeout(() => {
@@ -79,4 +80,6 @@ const NumberAuth = () => {
   )
 }
 
-export default NumberAuth
+export default NumberAuth;
+
+

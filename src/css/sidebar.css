@@ -1,0 +1,117 @@
+.dropdown-menu{
+    width: 500px;
+    height: 80vh;
+}
+.vertical-line {
+    border-left: 1px solid #ccc; /* Adjust color and thickness as needed */
+    height: 78vh; /* Adjust height to match the height of the columns */
+  }
+  .down-pro{
+    position: relative;
+    top: 90px !important;
+  }
+  .profile-div, .storage-div,.chat-div,.Account-div,.General-div{
+    position: relative;
+    left: -30px;
+  }
+  .user-img-circle {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.user-profile-pictures {
+    
+    border-radius: 50%;
+    width: 100px !important;
+    /* height: 100% !important; */
+    object-fit: cover !important;
+    
+}
+.user-profile-name {
+    font-size: 24px;
+    margin: 0;
+
+  }
+
+ 
+  
+  .user-profile-pencil-icon {
+    margin-right: 4px;
+  }
+
+ .about-head{
+    font-size: 10px;
+    margin-top: 10px;
+ } 
+  .user-about{
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-input{
+ 
+  }
+  
+  .user-profile-info {
+    margin-top: 32px;
+  }
+  
+  .user-profile-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .user-profile-data {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .user-profile-footer {
+    margin-top: 32px;
+  }
+  
+  .user-profile-logout-btn {
+    background-color: #727477;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 13px;
+  }
+  /* Storage css */
+  .checkout-div label {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+.checkout-div input[type="checkbox"] {
+    margin-right: 5px; 
+}
+/* Chats settings */
+.archive-chats-div {
+    border: 1px solid #000; 
+    padding: 9px; 
+    border-radius: 5px; 
+    display: inline-block; 
+}
+
+/*Account */
+.Account-div{
+  overflow-y: auto;
+  height: 70vh;
+  width: 350px;
+}
+.italic-p{
+  font-style: italic;
+}
+.last-seen{
+  position: relative;
+  top: 10px;
+}

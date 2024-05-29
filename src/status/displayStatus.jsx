@@ -1,25 +1,21 @@
 import React from 'react'
 import UserStatus from "./userStatus";
-const displayStatus = ({statusData}) => {
-  const filteredStatus = statusData.filter( 
-    ({sender}) => {
-      if (sender && sender.toLowerCase()) {
-        return true;
-      }
-      return false;
-    }
-  )
+import statusData from './statusData'
+import '../css/status.css'
+const displayStatus = () => {
+  
   return (
-    <div>
+    <div className='status-list'>
       <ul>
-        {filteredStatus.map((statusDatum,index) => (
+        {statusData.map((status, index) => (
         <UserStatus
-          key={index}
-          picture={statusDatum.picture}
-          sender={statusDatum.sender}
+          key={status.id}
+          picture={status.picture}
+          sender={status.sender}
         />
         ))}
       </ul>
+      <h1>Ok</h1>
     </div>
   )
 }

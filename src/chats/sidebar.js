@@ -1,8 +1,6 @@
-// <<<<<<< features
+
 import React,{useState} from "react";
-// =======
-// import React, {useState} from "react";
-// >>>>>>> main
+
 import Burgermenu from '../../src/assets/whatsapp clone chat images/6351903_burger_list_menu_navigation_icon.png'
 import CallPhone from '../../src/assets/whatsapp clone chat images/8201367_video_calling_recording_ui_film_icon.png'
 import StatusViewer from '../../src/assets/whatsapp clone chat images/9032198_whatsapp status_status_whatsapp_application_mobile_icon.png'
@@ -11,23 +9,30 @@ import Archive from '../../src/assets/whatsapp clone chat images/8541693_archive
 import Settings from '../../src/assets/whatsapp clone chat images/2849830_multimedia_options_setting_settings_gear_icon.png'
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
 import '../css/UserChat.css'
-// <<<<<<< features
+
 import '../css/sidebar.css'
 import { FaCamera, FaUser, FaComments, FaVideo, FaBell, FaDatabase, FaQuestionCircle, FaCog } from 'react-icons/fa';
 import DisplayProfile from "../profile/DisplayProfile";
 
 // import img1 from '../assets/pictures/user.jpg'
 // import { useLocation } from "react-router-dom";
+import UserChat from "./UserChat";
 
+import userStatus from "../status/userStatus";
 import Img1 from "../assets/pictures/user.jpg"
 import Storage from "../profile/Storage";
 import ChatsSettings from "../profile/ChatsSetting";
 import Account from "../profile/Account";
 import General from "../profile/General";
-
-const Sidebar = () => {
+import Display from "../status/Display";
+const Sidebar = ({currentPage}) => {
   const [selectedItem, setSelectedItem] = useState(null);
-   
+
+  // const [currentPage, setCurrentPage] = useState('null');
+
+//   const handleSideOptions = ({Burgermenu,Messages,CallPhone,StatusViewer}) => {
+//     currentPage({Burgermenu,Messages,CallPhone,StatusViewer});
+// }
     const handleItemClick = (title) => {
       setSelectedItem(title);
     };
@@ -49,22 +54,46 @@ const Sidebar = () => {
           return null;
       }
     };
+
+  //   const renderPage = () => {
+  //     switch(currentPage) {
+  //         case 'Burgermenu':
+  //             return <UserChat/>
+          
+  //         case 'Messages':
+  //             return <UserChat/>
+
+  //         case 'Cellphone':
+  //             return <UserChat/>
+
+  //         case 'StatusViewer':
+  //             return <Display />
+
+  //         default :
+  //         return null
+  //     }
+
+  // }
+  
   
   return (
 <aside className='aside'>  
     <div className='side-icons'>
-      <div className='upper-side-icons'>
-        <img src={Burgermenu} alt=''/>
-        <img src={Messages} alt=''/>
-        <img src={CallPhone} alt=''/>
-        <img src={StatusViewer} alt=''/>
-      </div>
+    <div className='upper-side-icons'>
+                <img src={Burgermenu} alt='' className="pointer-icon" onClick={() => currentPage('usermessage')}/>
+                <img src={Messages} alt=''  className="pointer-icon"  onClick={() => currentPage('usermessage')}/>
+                <img src={CallPhone} alt='' className="pointer-icon" onClick={() => currentPage('Phone')  }/>
+                <img src={StatusViewer} alt='' className="pointer-icon" onClick={() => currentPage('userstatus')}/>
+                {/* renderPage={renderPage}
+                handleSideOptions={handleSideOptions} */}
+                
+            </div>
       <div className='lower-side-icons '>
-        <img src={Star} alt=''/>
-        <img src={Archive} alt=''/>
+        <img src={Star} className="pointer-icon" alt=''/>
+        <img src={Archive} className="pointer-icon" alt=''/>
         <div class="dropdown">
   <a class=" dropdown-toggle-no-caret" data-bs-toggle="dropdown" aria-expanded="false">
-    <img src={Settings} alt="Settings Icon" />
+    <img src={Settings} alt="Settings Icon" className="pointer-icon"/>
   </a>
 
   <ul className="dropdown-menu">
@@ -104,53 +133,12 @@ const Sidebar = () => {
         </div>
         <div className="col-8 content-div" onClick={(e) =>  e.stopPropagation()}>
           {renderContent()}
-// =======
-import UserChat from "./UserChat";
-import UserStatus from "../status/statusBox"
 
-const Sidebar = () =>{
-    const [currentPage, setCurrentPage] = useState('null')
-    const handleSideOptions = ({Burgermenu,Messages,CallPhone,StatusViewer}) => {
-        currentPage({Burgermenu,Messages,CallPhone,StatusViewer});
-    }
-    const renderPage = () => {
-        switch(currentPage) {
-            case 'Burgermenu':
-                return <UserChat/>
-            
-            case 'Messages':
-                return <UserChat/>
 
-            case 'Cellphone':
-                return <UserChat/>
 
-            case 'StatusViewer':
-                return <UserStatus/>
-
-            default :
-            return null
-        }
-
-    }
-    return (
-        <aside className='aside'>  
-        <div className='side-icons'>
-            <div className='upper-side-icons'>
-                <img src={Burgermenu} alt='' onClick={() => setCurrentPage('Burgermenu')}/>
-                <img src={Messages} alt='' onClick={() => setCurrentPage('Messages')  }/>
-                <img src={CallPhone} alt='' onClick={() => setCurrentPage('CallPhone')  }/>
-                <img src={StatusViewer} alt='' onClick={() => setCurrentPage('StatusViewer')}/>
-                renderPage={renderPage}
-                handleSideOptions={handleSideOptions}
-            </div>
-            <div className='lower-side-icons'>
-                <img src={Star} alt=''/>
-                <img src={Archive} alt=''/>
-                <img src={Settings} alt=''/>
-                {/* <img src={mainImg} alt="profile-pic" className="profile-pic" /> */}
-            </div>
-// >>>>>>> main
-        </div>
+    
+        
+      </div>
       </div>
     </ul>
 </div>

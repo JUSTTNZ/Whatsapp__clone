@@ -102,4 +102,4 @@ const statusData = [
       }
 ]
 
-export default statusData
+export default statusData;

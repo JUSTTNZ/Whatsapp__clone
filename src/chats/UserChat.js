@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../css/UserChat.css'
 // import WhatsappLogo from '../../src/assets/whatsapp clone chat images/4375153_logo_whatsapp_icon.png'
 // import Burgermenu from '../../src/assets/whatsapp clone chat images/6351903_burger_list_menu_navigation_icon.png'
@@ -19,20 +19,35 @@ import Header from './header'
 import Sidebar from './sidebar'
 import ChatBox from './chatbox'
 import ChatHolder from './chatholder'
+import displayStatus from '../status/displayStatus'
+import Display from '../status/Display'
+import Calls from '../call/Calls'
+
 const UserChat = () => {
+  
+  const [displayComponent, setDisplayComponent] = useState('usermessage'); // track which component to display
+
+    // Function to handle button click inside Sidebar
+    const handlePage = (component) => {
+        setDisplayComponent(component);
+    };
   return (    
+
    <div className='head'>
      <Header />
     <div className=""> 
     <div className="row">
     <div className="col-1 ">
-    <Sidebar />
+    <Sidebar currentPage={handlePage} />
     </div>
-    <div className="col-3">
-    <ChatBox />
+    <div className="col-3 ">
+    {/* <ChatBox /> */}
+    {displayComponent === 'usermessage' && <ChatBox/>} {/* Display UserMessage if selected */}
+     {displayComponent === 'userstatus' && <Display />} {/* Display UserStatus if selected */}
+     {displayComponent === 'Phone' && <Calls /> } 
     </div>
     <div className="col-8 border">
-    <ChatHolder className="holder" />
+    <ChatHolder />
     </div>
     </div>
     </div>

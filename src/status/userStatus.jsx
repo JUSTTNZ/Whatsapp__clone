@@ -7,7 +7,7 @@ const userStatus = ({picture,sender}) => {
       <div>
         <span>Status</span>
         <div>
-            <img src={userProfile} alt=''userProfile/>
+            <img src={userProfile} alt=''userProfile />
             <p>My status</p>
             <p>No updates</p>
         </div>
@@ -15,7 +15,8 @@ const userStatus = ({picture,sender}) => {
       </div>
       <div className='status'>
         <div className='status-upload'>
-            <img className='status-image' alt='status-upload'>{picture}</img>
+            {/* <img className='status-image' alt='status-upload'>{picture}</img> */}
+            <img src={picture} width={'100px'} />
         </div>
         <div>
             <p>{sender}</p>

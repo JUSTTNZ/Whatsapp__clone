@@ -55,9 +55,14 @@ body {
 }
 
 .lower-side-icons {
+/* <<<<<<< features */
+    /* padding-top: 470px; */
+    margin-top: 150px;
+/* ======= */
     padding-top: 470px;
     position: absolute;
     top:300px;
+/* >>>>>>> main */
 }
 
 .lower-side-icons img{
@@ -159,6 +164,11 @@ input::placeholder{
     border-radius: 50%;
     height: 30px;
    
+/* <<<<<<< features */
+  }
+
+  
+=======
 }                 
 
 @media (min-width: 1200px) { 
@@ -268,3 +278,4 @@ input::placeholder{
        
     }
 }
+/* >>>>>>> main */

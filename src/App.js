@@ -5,8 +5,11 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
+// <<<<<<< features
+// =======
 import UserStatus from './status/statusBox'
 
+// >>>>>>> main
 import GetUser from './profile/GetUser';
 
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Burgermenu from '../../src/assets/whatsapp clone chat images/6351903_burger_list_menu_navigation_icon.png'
 import CallPhone from '../../src/assets/whatsapp clone chat images/8201367_video_calling_recording_ui_film_icon.png'
 import StatusViewer from '../../src/assets/whatsapp clone chat images/9032198_whatsapp status_status_whatsapp_application_mobile_icon.png'
@@ -7,19 +7,43 @@ import Archive from '../../src/assets/whatsapp clone chat images/8541693_archive
 import Settings from '../../src/assets/whatsapp clone chat images/2849830_multimedia_options_setting_settings_gear_icon.png'
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
 import '../css/UserChat.css'
-// import img1 from '../assets/pictures/user.jpg'
-// import { useLocation } from "react-router-dom";
+import UserChat from "./UserChat";
+import UserStatus from "../status/statusBox"
+
 const Sidebar = () =>{
-    // const location = useLocation();
-    // const { state: {mainImg} } = location;
+    const [currentPage, setCurrentPage] = useState('null')
+    const handleSideOptions = ({Burgermenu,Messages,CallPhone,StatusViewer}) => {
+        currentPage({Burgermenu,Messages,CallPhone,StatusViewer});
+    }
+    const renderPage = () => {
+        switch(currentPage) {
+            case 'Burgermenu':
+                return <UserChat/>
+            
+            case 'Messages':
+                return <UserChat/>
+
+            case 'Cellphone':
+                return <UserChat/>
+
+            case 'StatusViewer':
+                return <UserStatus/>
+
+            default :
+            return null
+        }
+
+    }
     return (
         <aside className='aside'>  
         <div className='side-icons'>
             <div className='upper-side-icons'>
-                <img src={Burgermenu} alt=''/>
-                <img src={Messages} alt=''/>
-                <img src={CallPhone} alt=''/>
-                <img src={StatusViewer} alt=''/>
+                <img src={Burgermenu} alt='' onClick={() => setCurrentPage('Burgermenu')}/>
+                <img src={Messages} alt='' onClick={() => setCurrentPage('Messages')  }/>
+                <img src={CallPhone} alt='' onClick={() => setCurrentPage('CallPhone')  }/>
+                <img src={StatusViewer} alt='' onClick={() => setCurrentPage('StatusViewer')}/>
+                renderPage={renderPage}
+                handleSideOptions={handleSideOptions}
             </div>
             <div className='lower-side-icons'>
                 <img src={Star} alt=''/>

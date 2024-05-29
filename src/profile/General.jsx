@@ -10,7 +10,7 @@ const General =  () => {
 
         </div>
         <div>
-            <h6>Language</h6>
+            <h6 className="mt-1">Language</h6>
 
         </div>
         <div className="mt-4">

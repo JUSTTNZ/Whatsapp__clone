@@ -53,16 +53,12 @@ body {
     display: flex;
     margin:  0px 20px 20px ;
 }
-
+.pointer-icon{
+    cursor: pointer;
+}
 .lower-side-icons {
-/* <<<<<<< features */
     /* padding-top: 470px; */
     margin-top: 150px;
-/* ======= */
-    padding-top: 470px;
-    position: absolute;
-    top:300px;
-/* >>>>>>> main */
 }
 
 .lower-side-icons img{
@@ -143,41 +139,43 @@ input::placeholder{
 
 
 
-/* .message-data {
-    flex: 1;
-    overflow-y: auto;
-    padding: 10px;
-    margin-top: 20px; */
-
-    /* Hide scrollbar for Firefox */
-    /* scrollbar-width: none;  */
+.message-data {
+    width: 30.5%;
+    height: 100%;
+    overflow-y: auto;  /* Adds a scrollbar to chats */
+    position: absolute;
+    top: 50px;
+    left: -10px;
     
-    /* Hide scrollbar for Internet Explorer 10+ */
-    /* -ms-overflow-style: none;  
-} */
+  /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  
+  
+.message-data::-webkit-scrollbar {
+    display: none; /* WebKit-based browsers (Chrome, Safari) */
+  }
 
-/* .message-data::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
-/* } */ */
 
   .profile-pic{
     border-radius: 50%;
     height: 30px;
    
-/* <<<<<<< features */
   }
 
   
-=======
-}                 
 
-@media (min-width: 1200px) { 
+
+@media (max-width: 1200px) { 
     .lower-side-icons {
         padding-top: 470px;
         position: absolute;
         top:300px;
     }
-
+    .pointer-icon{
+        cursor: pointer;
+    }
     .chat-option {
         display: flex;
      
@@ -261,21 +259,14 @@ input::placeholder{
         padding: 10px;
         margin-top: 20px;
     
-        /* Hide scrollbar for Firefox */
-        /* scrollbar-width: auto;  */
         
-        /* Hide scrollbar for Internet Explorer 10+ */
-        /* -ms-overflow-style: none;   */
     }
     
-    /* .message-data::-webkit-scrollbar {
-        display: none;  /*Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
-    /* } */ */
-    
+   
       .profile-pic{
         border-radius: 50%;
         height: 30px;
        
     }
 }
-/* >>>>>>> main */
+

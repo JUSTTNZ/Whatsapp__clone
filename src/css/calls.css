@@ -1,0 +1,27 @@
+/* calls.css */
+.call-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.phone-icon {
+    color: green;
+    margin-right: 10px;
+}
+
+.caller-picture  {
+    width: 30px !important;
+  
+    border-radius: 50%; /* To make the image round */
+    margin-right: 10px;
+}
+
+.caller-name {
+    font-weight: bold;
+}
+
+.call-time {
+    margin-left: auto; /* Pushes the call time to the right */
+    color: #666; /* Gray color for the call time */
+}

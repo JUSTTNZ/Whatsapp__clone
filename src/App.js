@@ -12,10 +12,11 @@ import UserStatus from './status/statusBox'
 // >>>>>>> main
 import GetUser from './profile/GetUser';
 
-
+import displayStatus from './status/displayStatus'
 
 
 import UserChat from './chats/UserChat';
+import Display from './status/Display';
 
 const App = () => {
  
@@ -32,7 +33,7 @@ const App = () => {
      <Route path='/get-user' element={<GetUser />} />
      <Route path='/user-chat' element={<UserChat/>}/>
      <Route path='/user-status' element={<UserStatus/>}/>
-
+     <Route path='/display' element={<Display />}/>
 
       
 

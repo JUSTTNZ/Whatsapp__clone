@@ -1,0 +1,25 @@
+/* src/components/StatusList.css */
+.status-list {
+    height: 40%;
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    padding: 10px; /* Optional: Add padding for better spacing */
+  }
+  
+  .status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .status-item img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Make image circular */
+    margin-right: 10px;
+  }
+  
+  .status-item p {
+    margin: 0;
+  }
+  

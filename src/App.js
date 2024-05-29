@@ -5,6 +5,11 @@ import './App.css';
 import Privacy from './links/Privacy';
 import Terms from './links/Terms';
 import VerifyOtp from './profile/verify';
+// <<<<<<< features
+// =======
+import UserStatus from './status/statusBox'
+
+// >>>>>>> main
 import GetUser from './profile/GetUser';
 
 
@@ -26,6 +31,7 @@ const App = () => {
 
      <Route path='/get-user' element={<GetUser />} />
      <Route path='/user-chat' element={<UserChat/>}/>
+     <Route path='/user-status' element={<UserStatus/>}/>
 
 
       

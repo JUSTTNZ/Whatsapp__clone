@@ -2,19 +2,18 @@ import React,{useState} from 'react'
 import '../css/NumberAuth.css'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'  //import the react-phone-input css
-// import { IconContext } from 'react-icons';
-// import { BsThreeDotsVertical } from 'react-icons/bs';
+import { useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import { setNumber } from '../action'
+import { setCode } from '../action'
 const NumberAuth = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  // const [otp, setOtp] = useState("");
-  // eslint-disable-next-line no-unused-vars
   const [randomCode, setRandomCode] = useState("");
-  // const [isphonevalid, setisphonevalid] = useState("")
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const validatePhone = () => {
+    
     // Remove any leading or trailing whitespace
     const trimmedPhoneNumber = phoneNumber.trim();
   
@@ -27,6 +26,12 @@ const NumberAuth = () => {
     }
   };
   
+  const handleNumberChange = (phoneNumber) =>{
+    const FormatPhone = "+" + phoneNumber
+    setPhoneNumber(FormatPhone);
+    dispatch(setNumber(FormatPhone))
+
+  }
 
   const sendOtp = () => {
     if (buttonDisabled) {
@@ -45,7 +50,8 @@ const NumberAuth = () => {
       // Simulate a delay of 3 seconds for the "sending" process
       setTimeout(() => {
         setRandomCode(newRandomCode);
-        navigate("/verify-otp", { state: { phoneNumber: validatedPhoneNumber, newRandomCode } });
+        dispatch(setCode(newRandomCode))
+        navigate("/verify-otp");
         setButtonDisabled(false);
       }, 3000);
     } else {
@@ -53,7 +59,7 @@ const NumberAuth = () => {
       setButtonDisabled(false);
     }
   };
-  
+
   return (
     <div className='main-container'>
      <div className='number-option'>
@@ -69,7 +75,8 @@ const NumberAuth = () => {
        <PhoneInput
         country={"ng"}
         value={phoneNumber}
-        onChange={(phoneNumber) => setPhoneNumber("+" + phoneNumber)}
+        onChange={handleNumberChange}
+        // onChange={(phoneNumber) => setPhoneNumber("+" + phoneNumber)}
       />
        </div>
     </div>

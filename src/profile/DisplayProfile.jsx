@@ -1,14 +1,18 @@
 import React from "react";
 import Img1 from "../assets/pictures/user.jpg"
+import { useSelector } from "react-redux";
 const DisplayProfile = () => {
+   const name = useSelector((state) => state.name)
+   const number = useSelector((state) => state.Number)
+   const image = useSelector((state) => state.image);
     return(
         <div className="profile-div">
              
         <div className="user-img-circle">
-<img src={Img1} alt="User profile" className="user-profile-pictures" />
+<img src={image} alt="User profile" className="user-profile-pictures" />
 </div>
 < div className="d-flex justify-content-between">
-<h2 className="user-profile-name">Billie domimic</h2>
+<h2 className="user-profile-name">{name}</h2>
 
    <i className="user-profile-pencil-icon"></i>✏
 </div>
@@ -27,7 +31,7 @@ const DisplayProfile = () => {
 </div>
 <div className="">
 <label className="user-profile-label">Phone Number</label>
-<h3 className="user-profile-data">07062487335  </h3>
+<h3 className="user-profile-data">{number}</h3>
 </div>
 <hr/>
 <div className="user-profile-footer">

@@ -1,27 +1,52 @@
-/* calls.css */
 .call-entry {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.phone-icon {
-    color: green;
+.caller-picture {
+    width: 30px;
+    border-radius: 50%; 
     margin-right: 10px;
 }
 
-.caller-picture  {
-    width: 30px !important;
-  
-    border-radius: 50%; /* To make the image round */
-    margin-right: 10px;
+.caller-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.caller-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .caller-name {
     font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+    margin-right: 10px;
 }
 
 .call-time {
-    margin-left: auto; /* Pushes the call time to the right */
-    color: #666; /* Gray color for the call time */
+    color: #666; 
+    white-space: nowrap; /* Ensure the time doesn't wrap to the next line */
+}
+
+.icon-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -20px;
+}
+
+.phone-icon {
+    color: green;
+    margin-right: 5px;
+}
+.income{
+    font-size:small;
 }

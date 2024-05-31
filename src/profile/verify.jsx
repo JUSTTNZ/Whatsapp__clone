@@ -2,14 +2,17 @@
 import React,{useState} from "react";
 import { useLocation,} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import '../css/verify.css'
 const VerifyOtp = (
 ) => {
+  const number = useSelector((state) => state.Number)
+  const randomcode = useSelector((state) => state.Code)
   const [otp, setOtp] = useState("");
-  const { state: { phoneNumber,newRandomCode } } = useLocation();
+  
 const navigate = useNavigate()
   // Check if both phoneNumber and dummyCode are defined
-if (!phoneNumber || !newRandomCode) {
+if (!number || !randomcode) {
     return <div>Loading...</div>;
   }
 
@@ -18,10 +21,10 @@ if (!phoneNumber || !newRandomCode) {
   };
 
   const verifyOtp = () => {
-    if (otp == newRandomCode) {
+    if (otp == randomcode) {
       alert("OTP verified successfully. Redirecting to the next page...");
       // Implement your navigation logic here
-      navigate("/get-user", { state: { phoneNumber } });
+      navigate("/get-user");
     } else {
       alert("Incorrect OTP, please try again.");
     }
@@ -30,8 +33,9 @@ if (!phoneNumber || !newRandomCode) {
   return (
     <div className="verify-container">
       <h1>Verify OTP</h1>
-      <p>Enter the OTP sent to {phoneNumber} to verify:</p>
-      <p>OTP code: {newRandomCode}</p>
+      <p>Enter the OTP sent to {number} to verify:</p>
+      <p>OTP code: {randomcode}</p>
+     
       <input type="text" value={otp} onChange={handleOtpInputChange} />
       <button onClick={verifyOtp} className="verify-btn btn btn-secondary">NEXT</button>
     </div>

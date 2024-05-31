@@ -4,9 +4,9 @@ import '../css/userpro.css'
 
 
 const UserPro = () => {
-    const location = useLocation();
-    const { state: { phoneNumber,name,file,image} } = location;
-   console.log(image)
+  //   const location = useLocation();
+  //   const { state: { phoneNumber,name,file,image} } = location;
+  //  console.log(image)
   
     return(
         <div className="container">

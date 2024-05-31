@@ -5,6 +5,9 @@ const initialState = {
   otp: "",
   name:"",
   Image: "",
+  Message: "",
+  Sender: "",
+  senderPic: "",
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,7 +33,21 @@ case "SET_NAME":
         ...state,
     Code: action.payload
     }
-    
+    case "SET_MESSAGE":
+    return{
+        ...state,
+     Message: action.payload
+        }
+    case "SET_SENDER":
+    return{
+        ...state,
+     Sender: action.payload
+            }
+    case "SET_SENDER_PIC":
+    return{
+        ...state,
+    senderPic: action.payload
+    }
   default:
     return state
   

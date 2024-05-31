@@ -10,6 +10,8 @@ body{
 
 .chat{
   overflow-y: auto;
+  height: 60vh;
+
   /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -150,8 +152,70 @@ header {
   margin: 0 5px;
  width: 700px;
 }
+.hidden {
+  display: none;
+}
 
 
+.loading-holder{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+  width: 100%;
+}
+
+.color{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  /* background-color: #181818; */
+  width: 102.9%;
+  
+}
+.log img {
+  width: 80px;
+  margin-top: 20px;
+  position: relative;
+  top: 150px;
+
+}
+.windows {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.windows h5 {
+  font-size: 24px;
+  margin: 0;
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  top: -15px;
+}
+.foot .lock-icon {
+  margin-right: 8px;
+}
+.foot .encrypted-text {
+  font-size: 14px;
+  color: #777777;
+}
 /* @media (max-width: 900px) {
   
 } */

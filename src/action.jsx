@@ -18,3 +18,18 @@ export const setName = (name) => ({
     type : "SET_CODE",
     payload: code
    })
+
+   export const SetMessage = (mes) => ({
+    type: "SET_MESSAGE",
+    payload: mes
+   })
+
+   export const setSender = (send) => ({
+    type: "SET_SENDER",
+    payload: send
+   })
+   
+   export const setSenderPic = (sendPic) => ({
+    type: "SET_SENDER_PIC",
+    payload: sendPic
+   })

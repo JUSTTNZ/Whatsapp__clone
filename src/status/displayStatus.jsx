@@ -5,7 +5,7 @@ import '../css/status.css'
 const displayStatus = () => {
   
   return (
-    <div className='status-list'>
+    <div className=''>
       <ul>
         {statusData.map((status, index) => (
         <UserStatus

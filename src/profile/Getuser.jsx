@@ -5,14 +5,18 @@ import '../css/getuser.css'
 import { useNavigate } from "react-router-dom";
 import { FaCamera } from "react-icons/fa";
 import { FaSmile } from "react-icons/fa";
+import { setName } from "../action";
+import { useDispatch } from "react-redux";
+import { setImages } from "../action";
 const GetUser = (
 ) => {
-  const location = useLocation();
+ 
   const navigate = useNavigate()
-  const { state: { phoneNumber } } = location;
+
   const [image, setImage] = useState("");
   const [preview, setPreview] = useState("");
   const [name, setUsername] = useState("")
+  const dispatch = useDispatch()
 
   const handleImage = async (e) => {
     const file = e.target.files[0];
@@ -22,48 +26,30 @@ const GetUser = (
       setImage(file);
       setPreview(imageUrl.target.result);
       console.log(file)
+      dispatch(setImages(imageUrl.target.result))
     };
 
     reader.readAsDataURL(file);
     
   };
 
-//   const handleAddImage = async (
-// ) => {
-//     const formData = new FormData();
-//     formData.append("image", image);
 
-//     axios.post("http://localhost:5174/get-user", formData).then((res) => {
-//       console.log(res);
-//     });
-//   };
 const handlenamechange = (e) => {
     setUsername(e.target.value)
+    dispatch(setName(e.target.value));
 }
-const getName = async () => {
+const NextButton = async () => {
   if (preview && name){
- // Convert the image file to Base64 string
- const base64Image = await convertImageToBase64(image);
+ 
  setUsername(name)
  console.log(name)
- navigate("/user-chat",{state:{phoneNumber,name,image: base64Image}})
+ navigate("/user-chat")
   } else {
     alert("Add image and name to continue")
   }
      
 }
-const convertImageToBase64 = async (file) => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      resolve(reader.result);
-    };
-    reader.onerror = (error) => {
-      reject(error);
-    };
-  });
-};
+
   return (
     <div>
    <div className="container">
@@ -104,7 +90,7 @@ const convertImageToBase64 = async (file) => {
       
      
     </div>
-    <button className="next-button btn btn-sm btn-secondary" onClick={getName}>Next</button>
+    <button className="next-button btn btn-sm btn-secondary" onClick={NextButton}>Next</button>
   </div>
 </div>
 

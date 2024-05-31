@@ -24,11 +24,13 @@
     border-radius: 50%;
     margin-right: 16px;
   }
+
   .username-container{
     display: flex;
     justify-content: space-between;
     margin: 10px;
   }
+
   .user-profile-name {
     font-size: 24px;
     margin: 0;
@@ -40,6 +42,7 @@
   .user-profile-pencil-icon {
     margin-right: 4px;
   }
+  
   .user-about{
     display: flex;
     justify-content: space-between;

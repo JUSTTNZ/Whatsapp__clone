@@ -1,6 +1,7 @@
 body{
   width: 100%;
   
+  
 }
 .chat-wrapper {
   display: flex;
@@ -19,7 +20,7 @@ body{
 .chat::-webkit-scrollbar {
   display: none; /* WebKit-based browsers (Chrome, Safari) */
 }
-header {
+.chat-holder {
     display: flex;
     justify-content: space-between;
     align-items: center;

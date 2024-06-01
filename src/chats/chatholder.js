@@ -43,7 +43,7 @@ if (!picture) {
 else
     return(
 <div class="chat-wrapper">
-<header>
+<header className="chat-holder">
 <div class="left-header">
 <img src={picture} class="user-image" alt="User Profile Image" />
 <span class="username">{Sender}</span>

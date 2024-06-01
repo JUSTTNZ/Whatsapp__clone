@@ -1,0 +1,20 @@
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+    width: 100%;
+    background-color: #aaaaaa4d;
+    border-bottom: 2px #a5a5a5 solid;
+}
+
+.whatsappLogo {
+    width: 40px;
+    padding-right: 10px;
+}
+
+.whatsapp {
+    letter-spacing: 1px;
+    padding-right: 10px;
+    border-right: 2px rgba(209, 209, 209, 0.432) solid;
+}

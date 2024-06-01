@@ -24,7 +24,7 @@ const Chatbox = () => {
   };
 return(
     <div className='chat-option'>
-    <div className='header'>
+     <div className='header '>
       <h5>Chats</h5>
       <div className='header-icons'>
         <img src={NewChats} alt='' />
@@ -32,7 +32,8 @@ return(
         <img src={FilterChat} alt='' />
       </div>
     </div>
-    <div className='search-container'>
+
+     <div className='search-container mt-5 mb-3'>
       <form className='search-form'>
         <input
           type='text'
@@ -47,15 +48,14 @@ return(
       </form>
     </div>
   
-    <div>
-      <div className='message-data'>
-        {/* <UserMessage messages={messages}/> */}
+      <div className='message-data mt-5'>
+       
+    <div className="message-box">
         <DisplayMessages messages={messages}
-                        //  searchQuery={searchQuery}
-                        // handleSearch={handleSearch}
+                        
                          searchQuery={searchQuery}
         />
-      </div>
+      </div> 
     </div>
   </div>
   

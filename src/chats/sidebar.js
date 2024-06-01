@@ -8,7 +8,7 @@ import Messages from '../../src/assets/whatsapp clone chat images/9042672_messag
 import Archive from '../../src/assets/whatsapp clone chat images/8541693_archive_box_icon.png'
 import Settings from '../../src/assets/whatsapp clone chat images/2849830_multimedia_options_setting_settings_gear_icon.png'
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
-import '../css/UserChat.css'
+
 
 import '../css/sidebar.css'
 import { FaCamera, FaUser, FaComments, FaVideo, FaBell, FaDatabase, FaQuestionCircle, FaCog } from 'react-icons/fa';

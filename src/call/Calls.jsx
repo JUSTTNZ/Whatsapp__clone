@@ -5,7 +5,7 @@ import { FaVideo } from "react-icons/fa";
 import '../css/calls.css'
 const Calls = () => {
     return (
-        <div>
+        <div className="callss">
             {callData.map((call, index) => (
                 <div key={index} className="call-entry">
                     <img src={call.picture} alt={call.caller} className="caller-picture" />

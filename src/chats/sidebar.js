@@ -25,6 +25,7 @@ import ChatsSettings from "../profile/ChatsSetting";
 import Account from "../profile/Account";
 import General from "../profile/General";
 import Display from "../status/Display";
+import Notify from "../profile/Notification";
 const Sidebar = ({currentPage}) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -49,7 +50,8 @@ const Sidebar = ({currentPage}) => {
               return <ChatsSettings />
               case 'Account':
                 return <Account />
-    
+              case "Notification":
+                return  <Notify />
         default:
           return null;
       }

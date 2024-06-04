@@ -22,17 +22,16 @@ import { useSelector } from 'react-redux';
 import { setDarkMode } from './action';
 const App = () => {
   const darkmode = useSelector((state) => state.darkmode);
-  const dispatch = useDispatch()
+ 
   
 
 
-  const toggleDark = () =>{
-    dispatch(setDarkMode(!darkmode));
-    alert("ok")
-  }
+  
   const styles = {
     backgroundColor: darkmode ? '#333' : '#FFF',
     minHeight: '100vh',
+    color: darkmode ? '#FFF' : '#000',
+    transition: 'all 0.3s',
     
   };
     
@@ -42,13 +41,7 @@ const App = () => {
  
   return (
     <div className='app' style={styles}>
-        {/* <nav className={`navbar navbar-expand-lg fixed-top  " border-bottom ${darkmode ? 'navbar-dark bg-dark' : 'navbar-light bg-white'}`}>
-          <h5>Ok</h5>
-          <button onClick={toggleDark}>
-        Toggle Dark Mode
-      </button>
-        </nav> */}
-     
+    
     
       <Router>
       <Routes>

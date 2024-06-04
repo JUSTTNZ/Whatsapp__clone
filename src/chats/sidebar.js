@@ -26,9 +26,18 @@ import Account from "../profile/Account";
 import General from "../profile/General";
 import Display from "../status/Display";
 import Notify from "../profile/Notification";
+import { useSelector } from "react-redux";
 const Sidebar = ({currentPage}) => {
   const [selectedItem, setSelectedItem] = useState(null);
-
+  const darkmode = useSelector((state) => state.darkmode);
+  const sidestyles = {
+    backgroundColor: darkmode ? '#333' : '#FFF',
+    // minHeight: '100vh',
+    color: darkmode ? '#fff' : '#000',
+    transition: 'all 0.3s',
+    
+  };
+    
   // const [currentPage, setCurrentPage] = useState('null');
 
 //   const handleSideOptions = ({Burgermenu,Messages,CallPhone,StatusViewer}) => {
@@ -98,13 +107,13 @@ const Sidebar = ({currentPage}) => {
     <img src={Settings} alt="Settings Icon" className="pointer-icon"/>
   </a>
 
-  <ul className="dropdown-menu">
+  <ul className="dropdown-menu" style={sidestyles}>
       <div className="row">
         <div className="col-3 " onClick={(e) =>  e.stopPropagation()}>
         {/* e.stopPropagation() is called to prevent the event from bubbling up to the 
         Bootstrap dropdown component, thereby keeping it open when an item is clicked. */}
   
-<li onClick={(e) =>{e.stopPropagation(); handleItemClick("General")}}>
+<li onClick={(e) =>{e.stopPropagation(); handleItemClick("General")}} style={sidestyles}>
   <a className="dropdown-item"><FaUser className="dropdown-menu-icon"/> General</a>
 </li>
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Account")}}>

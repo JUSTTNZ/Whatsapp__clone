@@ -10,7 +10,26 @@ const [displaytext, setDisplayText] = useState([]);
 const content = useSelector((state) => state.Message)
 const Sender = useSelector((state) => state.Sender)
 const picture = useSelector((state) => state.senderPic)
+
 console.log(content)
+
+const darkmode = useSelector((state) => state.darkmode);
+ const red = useSelector((state) => state.wallPaper)
+  
+
+
+  
+const chatstyles = {
+  backgroundColor: darkmode ? '#333' : '#FFF',
+  minheight: "100vh",
+  color: darkmode ? '#FFF' : '#000',
+  transition: 'all 0.3s',
+  
+};
+const Redcolor = {
+  color : "111",
+  backgroundColor: red
+};
 const Text = (e) =>{
     setValue(e.target.value)
    
@@ -24,8 +43,8 @@ const enter = (e) => {
     }
 }
 if (!picture) {
-    return <div className="loading-holder">
-<div className="color">
+    return <div className="loading-holder border" style={chatstyles}>
+<div className="color" style={chatstyles}>
 <div class="log">
     <img src={logo} alt="WhatsApp Logo" />
   </div>
@@ -42,9 +61,9 @@ if (!picture) {
 }
 else
     return(
-<div class="chat-wrapper">
-<header className="chat-holder">
-<div class="left-header">
+<div class="chat-wrapper" >
+<header className="chat-holder border-bottom" style={chatstyles}>
+<div class="left-header" >
 <img src={picture} class="user-image" alt="User Profile Image" />
 <span class="username">{Sender}</span>
 </div>
@@ -54,7 +73,7 @@ else
 <img src={Video} class="search-icon" alt="Search Icon" />
 </div>
 </header>
-<div class="chat">
+<div class="chat" style={Redcolor}>
 
 {/* <div class="message-holder">
 <div class="sender-holder">
@@ -120,7 +139,7 @@ Do u know any API I can use for sending verification code to phone numbers
 </div> */}
 
 </div>
-<div className="footer mt-2">
+<div className="footer mt-2" style={chatstyles}>
         <div class="message-input-wrapper d-flex justify-content-between">
             <div class="emoji-button">🤣</div>
             <div class="camera-button">📷</div>

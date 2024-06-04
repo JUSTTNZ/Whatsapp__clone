@@ -40,7 +40,7 @@ const UserChat = () => {
     <div className="col-1 col-md-1 col-lg-1">
     <Sidebar currentPage={handlePage} />
     </div>
-    <div className="col-4 col-md-4 col-lg-3">
+    <div className="col-4 col-md-4 col-lg-3 ">
     {/* <ChatBox /> */}
    {/* Display UserMessage if selected */}
    {displayComponent === 'usermessage' && <ChatBox/>}

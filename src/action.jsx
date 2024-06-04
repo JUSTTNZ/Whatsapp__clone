@@ -38,3 +38,7 @@ export const setName = (name) => ({
     type : "SET_DARK_MODE",
     payload: dark
    })
+   export const SetWallpaper = (wall) => ({
+    type: "SET_WALLPAPER",
+    payload:wall
+   })

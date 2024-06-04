@@ -6,9 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  font-family: 'FontAwesome' !important;
+  font-style: normal;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+select {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+option {
+  font-family: 'FontAwesome';
+  font-style: normal;
 }

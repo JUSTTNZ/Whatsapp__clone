@@ -27,6 +27,7 @@ import General from "../profile/General";
 import Display from "../status/Display";
 import Notify from "../profile/Notification";
 import { useSelector } from "react-redux";
+import Wallpaper from "../profile/Personalization";
 const Sidebar = ({currentPage}) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const darkmode = useSelector((state) => state.darkmode);
@@ -61,6 +62,8 @@ const Sidebar = ({currentPage}) => {
                 return <Account />
               case "Notification":
                 return  <Notify />
+                case "Wallpaper":
+                  return <Wallpaper />
         default:
           return null;
       }
@@ -99,7 +102,7 @@ const Sidebar = ({currentPage}) => {
                 handleSideOptions={handleSideOptions} */}
                 
             </div>
-      <div className='lower-side-icons '>
+      <div className='lower-side-icons ' >
         <img src={Star} className="pointer-icon" alt=''/>
         <img src={Archive} className="pointer-icon" alt=''/>
         <div class="dropdown">
@@ -122,8 +125,11 @@ const Sidebar = ({currentPage}) => {
 <li onClick={(e) => {e.stopPropagation();  handleItemClick("Chats")}}>
   <a className="dropdown-item"><FaCamera className="dropdown-menu-icon"/> Chats</a>
 </li>
-<li onClick={(e) => {e.stopPropagation();  handleItemClick("Video")}}>
+{/* <li onClick={(e) => {e.stopPropagation();  handleItemClick("Video")}}>
   <a className="dropdown-item"><FaVideo className="dropdown-menu-icon"/> Video</a>
+</li> */}
+<li onClick={(e) =>{e.stopPropagation();  handleItemClick("Wallpaper")}}>
+  <a className="dropdown-item"><FaBell className="dropdown-menu-icon"/> Theme</a>
 </li>
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Notification")}}>
   <a className="dropdown-item"><FaBell className="dropdown-menu-icon"/> Notification</a>
@@ -131,9 +137,9 @@ const Sidebar = ({currentPage}) => {
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Storage")}}>
   <a className="dropdown-item"><FaDatabase className="dropdown-menu-icon"/> Storage</a>
 </li>
-<li onClick={(e) =>{e.stopPropagation();  handleItemClick("Help")}}>
+{/* <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Help")}}>
   <a className="dropdown-item"><FaQuestionCircle className="dropdown-menu-icon"/> Help</a>
-</li>
+</li> */}
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Profile")}}>
   <a className="dropdown-item mt-5 down-pro"><FaCog className="dropdown-menu-icon"/> Profile</a>
 </li>

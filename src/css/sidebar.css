@@ -51,9 +51,10 @@
   }
   .down-pro{
     position: relative;
-    top: 90px !important;
+    top: 150px !important;
   }
-  .profile-div, .storage-div,.chat-div,.Account-div,.General-div{
+  .profile-div, .storage-div,.chat-div,.Account-div,.General-div,.wallpaper-div
+  ,.notify-div{
     position: relative;
     left: -30px;
   }

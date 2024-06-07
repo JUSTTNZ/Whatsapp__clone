@@ -9,6 +9,7 @@ const initialState = {
   Sender: "",
   senderPic: "",
   darkMode: false,
+  wallPaper: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -54,6 +55,11 @@ case "SET_NAME":
         ...state,
         darkmode: action.payload
       }
+      case "SET_WALLPAPER":
+        return{
+          ...state,
+          wallPaper:action.payload
+        }
   default:
     return state
   

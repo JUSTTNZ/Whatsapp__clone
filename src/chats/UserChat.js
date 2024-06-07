@@ -37,16 +37,17 @@ const UserChat = () => {
      <Header />
     <div className=""> 
     <div className="row">
-    <div className="col-1 ">
+    <div className="col-1 col-md-1 col-lg-1">
     <Sidebar currentPage={handlePage} />
     </div>
-    <div className="col-3 ">
+    <div className="col-4 col-md-4 col-lg-3 ">
     {/* <ChatBox /> */}
-    {displayComponent === 'usermessage' && <ChatBox/>} {/* Display UserMessage if selected */}
+   {/* Display UserMessage if selected */}
+   {displayComponent === 'usermessage' && <ChatBox/>}
      {displayComponent === 'userstatus' && <Display />} {/* Display UserStatus if selected */}
      {displayComponent === 'Phone' && <Calls /> } 
     </div>
-    <div className="col-8 border">
+    <div className="col-7  col-md-7 col-lg-8 border">
     <ChatHolder />
     </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import WhatsappLogo from '../../src/assets/whatsapp clone chat images/4375153_logo_whatsapp_icon.png'
-import '../css/UserChat.css'
+import '../css/header.css'
 const Header = () => {
     return(
           <div className='logo header-top'>

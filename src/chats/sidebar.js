@@ -8,7 +8,7 @@ import Messages from '../../src/assets/whatsapp clone chat images/9042672_messag
 import Archive from '../../src/assets/whatsapp clone chat images/8541693_archive_box_icon.png'
 import Settings from '../../src/assets/whatsapp clone chat images/2849830_multimedia_options_setting_settings_gear_icon.png'
 import Star from '../../src/assets/whatsapp clone chat images/430117_star_icon.png'
-import '../css/UserChat.css'
+
 
 import '../css/sidebar.css'
 import { FaCamera, FaUser, FaComments, FaVideo, FaBell, FaDatabase, FaQuestionCircle, FaCog } from 'react-icons/fa';
@@ -25,9 +25,20 @@ import ChatsSettings from "../profile/ChatsSetting";
 import Account from "../profile/Account";
 import General from "../profile/General";
 import Display from "../status/Display";
+import Notify from "../profile/Notification";
+import { useSelector } from "react-redux";
+import Wallpaper from "../profile/Personalization";
 const Sidebar = ({currentPage}) => {
   const [selectedItem, setSelectedItem] = useState(null);
-
+  const darkmode = useSelector((state) => state.darkmode);
+  const sidestyles = {
+    backgroundColor: darkmode ? '#333' : '#FFF',
+    // minHeight: '100vh',
+    color: darkmode ? '#fff' : '#000',
+    transition: 'all 0.3s',
+    
+  };
+    
   // const [currentPage, setCurrentPage] = useState('null');
 
 //   const handleSideOptions = ({Burgermenu,Messages,CallPhone,StatusViewer}) => {
@@ -49,7 +60,10 @@ const Sidebar = ({currentPage}) => {
               return <ChatsSettings />
               case 'Account':
                 return <Account />
-    
+              case "Notification":
+                return  <Notify />
+                case "Wallpaper":
+                  return <Wallpaper />
         default:
           return null;
       }
@@ -88,7 +102,7 @@ const Sidebar = ({currentPage}) => {
                 handleSideOptions={handleSideOptions} */}
                 
             </div>
-      <div className='lower-side-icons '>
+      <div className='lower-side-icons ' >
         <img src={Star} className="pointer-icon" alt=''/>
         <img src={Archive} className="pointer-icon" alt=''/>
         <div class="dropdown">
@@ -96,13 +110,13 @@ const Sidebar = ({currentPage}) => {
     <img src={Settings} alt="Settings Icon" className="pointer-icon"/>
   </a>
 
-  <ul className="dropdown-menu">
+  <ul className="dropdown-menu" style={sidestyles}>
       <div className="row">
         <div className="col-3 " onClick={(e) =>  e.stopPropagation()}>
         {/* e.stopPropagation() is called to prevent the event from bubbling up to the 
         Bootstrap dropdown component, thereby keeping it open when an item is clicked. */}
   
-<li onClick={(e) =>{e.stopPropagation(); handleItemClick("General")}}>
+<li onClick={(e) =>{e.stopPropagation(); handleItemClick("General")}} style={sidestyles}>
   <a className="dropdown-item"><FaUser className="dropdown-menu-icon"/> General</a>
 </li>
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Account")}}>
@@ -111,8 +125,11 @@ const Sidebar = ({currentPage}) => {
 <li onClick={(e) => {e.stopPropagation();  handleItemClick("Chats")}}>
   <a className="dropdown-item"><FaCamera className="dropdown-menu-icon"/> Chats</a>
 </li>
-<li onClick={(e) => {e.stopPropagation();  handleItemClick("Video")}}>
+{/* <li onClick={(e) => {e.stopPropagation();  handleItemClick("Video")}}>
   <a className="dropdown-item"><FaVideo className="dropdown-menu-icon"/> Video</a>
+</li> */}
+<li onClick={(e) =>{e.stopPropagation();  handleItemClick("Wallpaper")}}>
+  <a className="dropdown-item"><FaBell className="dropdown-menu-icon"/> Theme</a>
 </li>
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Notification")}}>
   <a className="dropdown-item"><FaBell className="dropdown-menu-icon"/> Notification</a>
@@ -120,9 +137,9 @@ const Sidebar = ({currentPage}) => {
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Storage")}}>
   <a className="dropdown-item"><FaDatabase className="dropdown-menu-icon"/> Storage</a>
 </li>
-<li onClick={(e) =>{e.stopPropagation();  handleItemClick("Help")}}>
+{/* <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Help")}}>
   <a className="dropdown-item"><FaQuestionCircle className="dropdown-menu-icon"/> Help</a>
-</li>
+</li> */}
 <li onClick={(e) =>{e.stopPropagation();  handleItemClick("Profile")}}>
   <a className="dropdown-item mt-5 down-pro"><FaCog className="dropdown-menu-icon"/> Profile</a>
 </li>

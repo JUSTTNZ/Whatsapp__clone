@@ -3,7 +3,12 @@
     align-items: center;
     margin-bottom: 10px;
 }
-
+.callss{
+    height: 40%;
+    overflow-y: auto;
+    
+    padding: 10px; 
+}
 .caller-picture {
     width: 30px;
     border-radius: 50%; 

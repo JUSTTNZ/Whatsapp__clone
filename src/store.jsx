@@ -8,6 +8,7 @@ const initialState = {
   Message: "",
   Sender: "",
   senderPic: "",
+  darkMode: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -48,6 +49,11 @@ case "SET_NAME":
         ...state,
     senderPic: action.payload
     }
+    case "SET_DARK_MODE":
+      return{
+        ...state,
+        darkmode: action.payload
+      }
   default:
     return state
   

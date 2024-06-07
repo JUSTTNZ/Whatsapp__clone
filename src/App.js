@@ -17,11 +17,32 @@ import displayStatus from './status/displayStatus'
 
 import UserChat from './chats/UserChat';
 import Display from './status/Display';
-
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { setDarkMode } from './action';
 const App = () => {
+  const darkmode = useSelector((state) => state.darkmode);
+ 
+  
+
+
+  
+  const styles = {
+    backgroundColor: darkmode ? '#333' : '#FFF',
+    minHeight: '100vh',
+    color: darkmode ? '#FFF' : '#000',
+    transition: 'all 0.3s',
+    
+  };
+    
+
+  
+
  
   return (
-    <div className='app'>
+    <div className='app' style={styles}>
+    
+    
       <Router>
       <Routes>
         <Route path='/' element={<Signup /> } />

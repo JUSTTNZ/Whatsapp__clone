@@ -5,17 +5,20 @@ const Display = () => {
 
     return(
 <div className="status-list">
-<div> <UserStatus/></div>
-    <ul>
-
-        {statusData.map((status, index) => (
-        
+  <div className="">
+    <UserStatus />
+  </div>
+<ul>
+        {statusData.map((status,index) => (
+     
         <div key={index}>
-          <img src={status.picture} width={'100px'} alt=""/>
-          <p >{status.sender}</p>
-          <p>10:30 AM</p>
+              
+          <img src={status.picture} width={"100px"} />
+          <p>{status.sender}</p>
+        
         </div>
-
+    
+          
         ))}
       </ul>
 </div>

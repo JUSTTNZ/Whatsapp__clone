@@ -10,7 +10,7 @@ import VerifyOtp from './profile/verify';
 import UserStatus from './status/statusBox'
 
 // >>>>>>> main
-import GetUser from './profile/GetUser';
+import GetUser from './profile/Getuser';
 
 import displayStatus from './status/displayStatus'
 

@@ -164,14 +164,22 @@ input::placeholder{
    
   }
 
+@media (min-width: 1200px) {
+    .lower-side-icons {
+        /* padding-top: 470px; */
+        position: relative;
+        top: 400px !important;
+    }
+}
   
 
 
 @media (max-width: 1200px) { 
+
     .lower-side-icons {
-        padding-top: 470px;
-        position: absolute;
-        top:300px;
+        /* padding-top: 470px; */
+        position: relative;
+        top: 300px !important;
     }
     .pointer-icon{
         cursor: pointer;

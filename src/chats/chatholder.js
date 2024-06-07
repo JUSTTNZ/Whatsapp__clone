@@ -10,6 +10,7 @@ const [displaytext, setDisplayText] = useState([]);
 const content = useSelector((state) => state.Message)
 const Sender = useSelector((state) => state.Sender)
 const picture = useSelector((state) => state.senderPic)
+
 console.log(content)
 const Text = (e) =>{
     setValue(e.target.value)
@@ -23,7 +24,8 @@ const enter = (e) => {
       
     }
 }
-if (!picture) {
+
+if (!Sender) {
     return <div className="loading-holder">
 <div className="color">
 <div class="log">

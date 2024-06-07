@@ -22,7 +22,7 @@ import ChatHolder from './chatholder'
 import displayStatus from '../status/displayStatus'
 import Display from '../status/Display'
 import Calls from '../call/Calls'
-
+import userStatus from '../status/userStatus'
 const UserChat = () => {
   
   const [displayComponent, setDisplayComponent] = useState('usermessage'); // track which component to display

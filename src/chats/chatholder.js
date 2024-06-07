@@ -42,16 +42,12 @@ const enter = (e) => {
       
     }
 }
-<<<<<<< HEAD
 
-if (!Sender) {
-    return <div className="loading-holder">
-<div className="color">
-=======
+
 if (!picture) {
     return <div className="loading-holder border" style={chatstyles}>
 <div className="color" style={chatstyles}>
->>>>>>> d5d4144b8f812b0c7d4d21c11f8c25b24010920b
+
 <div class="log">
     <img src={logo} alt="WhatsApp Logo" />
   </div>

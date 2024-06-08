@@ -6,6 +6,20 @@ import '../css/calls.css'
 const Calls = () => {
     return (
         <div className="callss">
+              <div className=''>
+      <form className=''>
+        <input
+          type='text'
+          className='search-input'
+          placeholder='search or start a new chat'
+        //   value={searchQuery}
+        //    onChange={(e) => setSearchQuery(e.target.value)}
+        //    onKeyDown={(e) => {
+           
+        //        }}
+        />
+      </form>
+    </div>
             {callData.map((call, index) => (
                 <div key={index} className="call-entry">
                     <img src={call.picture} alt={call.caller} className="caller-picture" />

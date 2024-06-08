@@ -4,13 +4,16 @@
     margin-bottom: 10px;
 }
 .callss{
-    height: 40%;
+    height: 100%;
     overflow-y: auto;
-    
+    left: 50px;
     padding: 10px; 
+    position: absolute;
+    width: 30%;
 }
 .caller-picture {
-    width: 30px;
+    width: 50px; 
+    height: 50px; 
     border-radius: 50%; 
     margin-right: 10px;
 }
@@ -20,6 +23,7 @@
     flex-direction: column;
     margin-top: 10px;
     width: 100%;
+    padding: 5px;
 }
 
 .caller-details {
@@ -55,3 +59,46 @@
 .income{
     font-size:small;
 }
+.link{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* .link-circle{
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 10px;
+    border: 1px solid wheat;
+} */
+.link-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+}
+.link-details{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.share-content{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -20px;
+}
+.link-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid wheat;
+  }
+  .link-icon {
+    margin: 0;
+  }
+  

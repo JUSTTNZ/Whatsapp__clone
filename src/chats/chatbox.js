@@ -9,19 +9,7 @@ const Chatbox = () => {
   
   const [searchQuery, setSearchQuery] = useState("");
   const [searchError, setSearchError] = useState(false); 
-  const handleSearch = () => {
-    const query = searchQuery.toLowerCase().trim();
-    if (query) {
-      // Perform your search here and set searchError accordingly
-      if (query) {
-        setSearchError(false); // name found
-        console.log(query)
-       
-      } else {
-        setSearchError(true); // No name found
-      }
-    }
-  };
+ 
 return(
     <div className='chat-option'>
      <div className='header '>

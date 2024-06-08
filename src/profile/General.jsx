@@ -16,7 +16,7 @@ const General =  () => {
         <div className="mt-4">
             <h6>Typing</h6>
             <p>Change typing settings for autocorrect <br/>
-            and misspelled highlight from <a>Windom setting</a></p>
+            and misspelled highlight from <a>Window setting</a></p>
         </div>
         <div className="border-bottom"></div>
         <div className="mt-4">

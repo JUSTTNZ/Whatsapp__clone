@@ -4,10 +4,12 @@
     margin-bottom: 10px;
 }
 .callss{
-    height: 40%;
+    height: 100%;
     overflow-y: auto;
-    
+    left: 40px;
     padding: 10px; 
+    position: absolute;
+    width: 30%;
 }
 .caller-picture {
     width: 30px;

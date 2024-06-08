@@ -6,6 +6,7 @@ const Display = () => {
 
     return(
 <div className="status-list">
+  <div className="status-box">
   <div className="">
     <UserStatus  />
   </div>
@@ -21,6 +22,8 @@ const Display = () => {
           
         ))}
       </ul>
+  </div>
+ 
 </div>
     )
 }

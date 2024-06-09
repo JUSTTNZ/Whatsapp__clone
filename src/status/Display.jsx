@@ -6,11 +6,17 @@ const Display = () => {
 
     return(
 <div className="status-list">
+<div className="">
+    <span className='header-status'>Status</span>
+    </div>
   <div className="status-box">
+   
   <div className="">
     <UserStatus  />
   </div>
-<ul>
+  
+  <ul>
+  
         {statusData.map((status,index) => (
      
         <div key={index} className="status-upload">
@@ -21,7 +27,10 @@ const Display = () => {
     
           
         ))}
+       
       </ul>
+  
+
   </div>
  
 </div>

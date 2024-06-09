@@ -3,17 +3,20 @@
 }
 .status-list {
     height: 100%;
-    overflow-y: auto;
+    
    position: absolute;
   width: 30%;
     padding: 10px; 
     
     left: 40px;
   }
+
   .status-box{
-  
-  
+    overflow-y: auto;
+  height: 90%;
     top: 10px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
   }
   .status-item {
     display: flex;
@@ -39,16 +42,16 @@
     
   }
 
-  .user-status .header {
+  /* .user-status .header {
     font-size: 25px;
     font-weight: bold;
     position: absolute;
     left: 0;
-  }
+  } */
 
 .user {
   /* position: relative; */
-  margin-top: 80px;
+  margin-top: 40px;
   padding-left: 20px;
   display: flex;
   gap: 20px;
@@ -66,6 +69,15 @@
 }
 
 .span {
+  padding-left: 20px;
+  
+
+}
+.header-status{
+  color: black;
+  
+  font-weight: 700;
+  font-size: larger;
   padding-left: 20px;
   padding-top: 30px;
 }

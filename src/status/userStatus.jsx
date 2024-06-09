@@ -16,14 +16,10 @@ const userStatus = ({picture,sender}) => {
         <span className='span'>Recent updates</span>
         
       </div>
-      {/* <div className='status'>
-        <div className='status-upload'>
-
-            <p className='names'>{sender}</p>
-        </div>
-      </div> */}
+      
     </>
   )
 }
 
 export default userStatus
+S

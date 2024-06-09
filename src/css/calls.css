@@ -1,15 +1,23 @@
-.call-entry {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+
 .callss{
     height: 100%;
-    overflow-y: auto;
-    left: 50px;
+  
+    left: 45px;
     padding: 10px; 
     position: absolute;
     width: 30%;
+}
+.call-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+.call-flow{
+    overflow-y: auto;
+    height: 60%;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 .caller-picture {
     width: 50px; 
@@ -100,5 +108,8 @@
   }
   .link-icon {
     margin: 0;
+    color: #fff !important;
+    background-color: #fff !important;
   }
+  
   

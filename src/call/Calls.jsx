@@ -55,6 +55,7 @@ const Calls = () => {
         </div>
 
     </div>
+    <div className="call-flow">
             {filterCall.map((call, index) => (
                 <div key={index} className="call-entry">
                     <img src={call.picture} alt={call.caller} className="caller-picture" />
@@ -70,6 +71,7 @@ const Calls = () => {
                     </div>
                 </div>
             ))}
+            </div>
         </div>
     )
 }
